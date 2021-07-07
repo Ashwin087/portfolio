@@ -1,0 +1,84 @@
+footer .titles {
+    padding-top: 6rem;
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.3rem;
+    padding-bottom: 1.2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset {
+    display: flex;
+    width: 90%;
+    border: none;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 1.2rem;
+    padding: 1rem;
+}
+
+textarea {
+    resize: none;
+    width: 90%;
+    padding: 1rem;
+}
+
+button {
+    margin-top: 1.2rem;
+    border-radius: 3rem;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    // max-width: 133px;
+}
+
+button:hover,
+button:focus{
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.contactIcons {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+    font-size: 2rem;
+}
+
+.contactIcons i:hover,
+.contactIcons i:focus {
+    color: #03A062;
+    scale: 1.4;
+    transition: 1s;
+}
+
+.contactIcons li a {
+    position: relative;
+}
+
+.scrollToTop {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.scrollToTop:hover,
+.scrollToTop:focus {
+    cursor: pointer;
+}

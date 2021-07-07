@@ -1,0 +1,98 @@
+@media screen and (min-width: 430px){
+    .about p {
+    font-size: 1.25rem;
+    }
+
+    .projectDisplay img {
+        display: none;
+    }
+
+    .projectDisplay video {
+        display: block;
+    }
+
+    .skillList {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .vsCode {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 650px){
+    .project {
+        .projectInfo{
+            .projectName {
+                font-size: 2rem;
+                padding: 3rem 0;
+            }
+
+            .projectDesc {
+                font-size: 1.3rem;
+            }
+
+            .projectIcons {
+                font-size: 2rem;
+            }
+
+            .projectLink {
+                font-size: 1.35rem;
+            }
+        }
+    }
+
+    .scrollToTop {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media screen and (min-width: 985px){
+    .landingText {
+        height: 84vh;
+    }
+
+    .landingText h1{
+        font-size: 4rem;
+        padding: 4.5rem 0;
+    }
+
+    .landingText h2,
+    .landingText p {
+        font-size: 2rem;
+    }
+    
+    .skillList {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .skillList li .icons.skills {
+        font-size: 3rem;
+    }
+    .skillList a {
+        font-size: 1.23rem;
+    }
+
+    .projectDesc,
+    .projectDisplay img, 
+    .projectDisplay video {
+        max-width: 950px;
+    }
+
+    form input {
+        width: calc(100% / 2)
+    }
+
+    .name {
+        margin-right: 3px;
+    }
+
+    .email {
+        margin-left: 3px;
+    }
+
+    fieldset {
+        flex-direction: row;
+    }
+}

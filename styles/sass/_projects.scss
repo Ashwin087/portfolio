@@ -1,0 +1,151 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    // border: 1px solid red;
+
+    .projectInfo {
+        text-align: center;
+
+        .projectName {
+            font-size: 1.5rem;
+            padding: 2rem 0;
+            line-height: 2.5rem;
+        }
+
+        .projectDesc {
+            font-size: 1rem;
+            padding-bottom: 1.25rem;
+            width: 90%;
+            margin: 0 auto;
+        }
+    
+        .projectIcons {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 1.5rem;
+            padding: 2.25rem 0;
+            .projectIcons .projects {
+                font-size: 1.5rem;
+            }
+        }
+
+        .projectLink {
+            font-size: 1.2rem;
+            padding-bottom: 3rem;
+            font-weight: bold;
+            .projectLink a {
+                padding: 0.5rem;
+                border-radius: 2rem;
+            }
+        }
+    }
+}
+
+.projectLink a:focus,
+.projectLink a:hover {
+    text-decoration: underline 5px #03A062;
+}
+
+.projectIcons .projects:hover,
+.projectIcons .projects:focus{
+    color: #03A062;
+    transition: 0.75s;
+}
+
+
+.projectDisplay {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.projectDisplay video {
+    display: none;
+}
+
+.projectDisplay img,
+.projectDisplay video {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1.5px solid rgb(255, 255, 255);
+    transition: 1.25s;
+}
+
+.projectDisplay img:focus,
+.projectDisplay img:hover,
+.projectDisplay video:focus,
+.projectDisplay video:hover {
+    transition: 1.25s;
+}
+
+.project { 
+    background: #222324;
+    position: relative;
+    border-radius: 2rem;
+    border: 3px solid #FFFFFF;
+    transition: 0.7s
+}
+
+.project:hover {
+        box-shadow: 0px 0px 14px 7px rgba(255,255,255,0.71);
+-webkit-box-shadow: 0px 0px 14px 7px rgba(255,255,255,0.71);
+-moz-box-shadow: 0px 0px 14px 7px rgba(255,255,255,0.71);
+    scale: 1.05;
+    transition: 1s
+}
+
+// Border Credit to Mike-Schultz's CodePen: https://codepen.io/mike-schultz/pen/NgQvGO
+// .project1:after {
+//     content: '';
+//     position: absolute;
+//     top: -3px;
+//     left: -3px;
+//     height: calc(100% + 3px * 2);
+//     width: calc(100% + 3px * 2);
+//     background: linear-gradient(45deg, #81ff5b, #f1b139, #ff9100, #ff9100, #07b307, #6fba82);
+//     border-radius: calc(2 * 3px);
+//     z-index: -1;
+//     animation: animatedgradient 6s ease alternate infinite;
+//     background-size: 300%;
+// }
+
+// .project2:after {
+//     content: '';
+//     position: absolute;
+//     top: -3px;
+//     left: -3px;
+//     height: calc(100% + 3px * 2);
+//     width: calc(100% + 3px * 2);
+//     background: linear-gradient(45deg, #83827f, #1a1818, #ebebeb, #525252, #949494, #ffffff);
+//     border-radius: calc(2 * 3px);
+//     z-index: -1;
+//     animation: animatedgradient 5s ease alternate infinite;
+//     background-size: 300%;
+// }
+
+// .project3:after {
+//     content: '';
+//     position: absolute;
+//     top: -3px;
+//     left: -3px;
+//     height: calc(100% + 3px * 2);
+//     width: calc(100% + 3px * 2);
+//     background: linear-gradient(45deg,  #22b4ee, #03A062, #5073b8, #1098ad, #07b39b, #6fba82);
+//     border-radius: calc(2 * 3px);
+//     z-index: -1;
+//     animation: animatedgradient 6s ease alternate infinite;
+//     background-size: 300%;
+// }
+
+// @keyframes animatedgradient {
+// 	0% {
+// 		background-position: 0% 50%;
+// 	}
+// 	50% {
+// 		background-position: 100% 50%;
+// 	}
+// 	100% {
+// 		background-position: 0% 50%;
+// 	}
+// }

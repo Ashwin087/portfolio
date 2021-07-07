@@ -1,0 +1,15 @@
+@import 'setup';
+@import 'header';
+@import 'about';
+@import 'projects';
+@import 'footer';
+@import '_mediaQueries';
+
+html {
+    background-color: #0c0c0c;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.75rem;
+    letter-spacing: 1.25px;
+    // font-family: 'Spartan', sans-serif;
+    // font-family: 'Varela Round', sans-serif;
+}
