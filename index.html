@@ -22,19 +22,21 @@
     <header class="wrapper">
         <nav>
             <div class="navLogo">
-                <h4>Ashwin</h4>
+                <a href="#">Home</a>
+
+                <div class="navBurger" id="navBurger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </div>
-            <ul class="navLinks">
+            <ul class="navLinks" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="navBurger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+
         </nav>
 
         <div class="landingText">
@@ -47,9 +49,12 @@
     <main>
         <section class="about wrapper" id="about">
             <h2 class="titles">About Me</h2>
-            <p>Hi! I'm a Front-End Web Developer based out of Toronto and recent graduate from Juno College's immersive bootcamp. I strive to create practical and accessible apps with dry code. I value working in engaging environments that allow me to apply what I am strong at while being able to continually grow my skills. </p>
-            <p>My experience in policy development is similar to web development where I'd be given a design and be responsible for developing and implementing a program. As a worker material planner, I was responsible for managing inventory using using SAP and troubleshooting logistical inquiries. Web development is a blend of two experiences and I've been enjoying it every bit as much! </p>
-            <p><strong>Tl;dr: </strong> I like coding, learning, problem solving and am available to work!</p>
+            <p>I'm Ashwin, a Front-End Web Developer and recent graduate from Juno College's immersive bootcamp. My goal is to create practical and accessible apps with dry code. I enjoy collaborating with others to build interactive and user friendly apps. 
+            <p>My previous experience as a planner and policy analyst allows me to excel at creative problem solving which translates well to debugging! <strike>To hide the fact I'm a robot</strike> Aside from coding, I enjoy martial arts and leveling up my cooking skills (not my Pokemon skills though, already a low-key Pokemon master). </p>
+            <p><strong>Tl;dr: </strong> I like coding, learning, problem solving, am totally not a robot and available to work!</p>
+            <div class="resume">
+                <a href="./assets/Ashwin-Singh-Resume.pdf">View Resume</a>
+            </div>
         </section>
 
         <section class="skills wrapper" id="skills">
@@ -117,8 +122,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank" rel="noopener noreferrer">
-                        <i class="icons skills fas fa-mobile-alt" title="Responsive Design"></i>Responsive Design
+                    <a href="https://dev.to/charissayj/pair-and-mob-programming-best-practices-ef9" target="_blank" rel="noopener noreferrer">
+                        <i class="icons skills fas fa-users" title="Pair/Mob Programming"></i>Pair/Mob Programming
                     </a>
                 </li>
                 <li>
@@ -126,12 +131,12 @@
                         <i class="icons skills fas fa-universal-access" title="Accessibility"></i>Accessibility
                     </a>
                 </li>
-
                 <li>
-                    <a href="https://dev.to/charissayj/pair-and-mob-programming-best-practices-ef9" target="_blank" rel="noopener noreferrer">
-                        <i class="icons skills fas fa-users" title="Pair/Mob Programming"></i>Pair/Mob Programming
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank" rel="noopener noreferrer">
+                        <i class="icons skills fas fa-mobile-alt" title="Responsive Design"></i>Responsive Design
                     </a>
                 </li>
+
             </ul>
         </section>
 
@@ -140,7 +145,7 @@
             <div class="project odd project1">
                 <div class="projectInfo">
                     <h3 class="projectName">Daily Crypto Update</h3>
-                    <p class="projectDesc">Paired programing????, this app returns basic crypto currency information along with updates from the last 24 hours. The project's highlighting feature is having an accessible autosuggest menu based on user input.</p>  
+                    <p class="projectDesc">A paired programed app that returns basic crypto currency information along with updates from the last 24 hours. The project's highlighting feature is having an accessible autosuggest menu based on user input.</p>  
                     <figure class="projectDisplay">
                         <img src="./assets/project1ScreenShot.png" alt="Screenshots of the desktop view for Daily Crypto Update app">
                         <video width="100%" height="auto" autoplay loop muted>
@@ -156,9 +161,9 @@
                         <li><i class="icons projects fas fa-users" title="Pair Programming"></i></li>
                     </ul>
                     <div class="projectLink">
-                        <a href="https://cryptoupdate.netlify.app/">Live Site</a>
+                        <a href="https://cryptoupdate.netlify.app/" target="_blank" rel="noopener noreferrer">Live Site</a>
                         <span> | </span>
-                        <a href="https://github.com/andrew-ashwin-project2/crypto">GitHub</a>
+                        <a href="https://github.com/andrew-ashwin-project2/crypto" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
 
@@ -181,9 +186,9 @@
                         <li><i class="icons projects fas fa-cogs" title="Rest API"></i></li>
                     </ul>
                     <div class="projectLink">
-                        <a href="https://artistdiscography.netlify.app/">Live Site</a>
+                        <a href="https://artistdiscography.netlify.app/" target="_blank" rel="noopener noreferrer">Live Site</a>
                         <span> | </span>
-                        <a href="https://github.com/Ashwin087/project3-album-app">GitHub</a>
+                        <a href="https://github.com/Ashwin087/project3-album-app" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
 
@@ -206,9 +211,9 @@
                         <li><i class="icons projects fas fa-cogs" title="Rest API"></i></li>
                     </ul>
                     <div class="projectLink">
-                        <a href="https://weathermodal.netlify.app/">Live Site</a>
+                        <a href="https://weathermodal.netlify.app/" target="_blank" rel="noopener noreferrer">Live Site</a>
                         <span> | </span>
-                        <a href="https://github.com/Ashwin087/weather">GitHub</a>
+                        <a href="https://github.com/Ashwin087/weather" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -217,7 +222,7 @@
 
     <footer class="wrapper" id="contact">
         <h2 class="titles">Contact</h2>
-        <p>Shoot me a message!</p>
+        <p>If you have any questions about me or my projects, feel free to shoot me a message! Always open to chat about anything (except captcha checks!).</p>
         <form action="https://formspree.io/f/mwkaqjyb"method="POST">
             <fieldset class="userInfo">
                 <label for="name" class="sr-only">Name</label>
@@ -231,27 +236,27 @@
         </form>
         <ul class="contactIcons">
             <li>
-                <a href="mailto:ashwin.singh.087@gmail.com" title="Send Ashwin an email!">
+                <a href="mailto:ashwin.singh.087@gmail.com" title="Send Ashwin an email!" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i>
                 </a>
             </li>
             <li>
-                <a href="https://github.com/Ashwin087" title="View Ashwin's GitHub!">
+                <a href="https://github.com/Ashwin087" title="View Ashwin's GitHub!" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                 </a>
             </li>
             <li>
-                <a href="https://twitter.com/Not_Ash_Ketchem" title="View Ashwin's Tweets!">
+                <a href="https://twitter.com/Not_Ash_Ketchem" title="View Ashwin's Tweets!" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-twitter"></i>
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/ashwinsingh087/" title="Visit Ashwin's LinkedIn page!">
+                <a href="https://www.linkedin.com/in/ashwinsingh087/" title="Visit Ashwin's LinkedIn page!" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             <li>
-                <a href="https://calendly.com/ashwin087" title="Schedule an appointment on Calendly!">
+                <a href="https://calendly.com/ashwin087" title="Schedule an appointment on Calendly!" target="_blank" rel="noopener noreferrer">
                     <i class="far fa-calendar-alt"></i>
                 </a>
             </li>

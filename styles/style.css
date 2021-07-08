@@ -245,6 +245,7 @@ i,
 p,
 span,
 figure,
+nav,
 fieldset,
 ul,
 li {
@@ -270,6 +271,42 @@ header {
   height: 100vh;
 }
 
+.landingText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.landingText h1 {
+  font-size: 3rem;
+  padding: 2.25rem 0;
+  line-height: 3rem;
+}
+
+.landingText h2 {
+  font-size: 20.5px;
+}
+
+.landingText p {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  overflow: hidden;
+  font-size: 20px;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,43 +317,86 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 10vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+}
+
+.navLinks.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .navLogo {
   color: #e1e1e1;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 1.5px;
-  font-size: 20px;
-}
-
-.navLinks {
+  font-size: 1.75rem;
+  padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 55%;
-  background-color: black;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 10;
+  background-color: #000000;
+}
+
+.navLinks {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.navLinks li {
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
 }
 
 .navLinks a {
-  color: #e1e1e1;
-  letter-spacing: 1.5px;
-  font-weight: bold;
-  font-size: 16px;
-  border: 1px solid #03A062;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.navLinks li:hover {
+  background-color: #555;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .navBurger {
-  display: none;
-  position: absolute;
-  right: 30px;
+  cursor: pointer;
+  top: 2rem;
+  right: 2rem;
+  width: 30px;
 }
 
 .navBurger div {
   background-color: #e1e1e1;
-  width: 25px;
+  width: 100%;
   height: 3px;
   margin: 5px;
   border-radius: 20%;
@@ -324,77 +404,6 @@ nav {
   transition: all 0.5s ease;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-.navLinks {
-  position: absolute;
-  right: 0px;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: -webkit-transform 0.5s ease-in;
-  transition: -webkit-transform 0.5s ease-in;
-  transition: transform 0.5s ease-in;
-  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-}
-
-.navLinks ul {
-  overflow-x: hidden;
-}
-
-.navLinks li {
-  opacity: 0;
-}
-
-.navBurger {
-  display: block;
-  cursor: pointer;
-}
-
-.navActive {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-@-webkit-keyframes navLinkFade {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
 .burgerToggle .line1 {
   -webkit-transform: rotate(-45deg) translate(-5px, 6px);
           transform: rotate(-45deg) translate(-5px, 6px);
@@ -411,41 +420,6 @@ body {
 .burgerToggle .line3 {
   -webkit-transform: rotate(45deg) translate(-5px, -6px);
           transform: rotate(45deg) translate(-5px, -6px);
-}
-
-.landingText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 80vh;
-}
-
-.landingText h1 {
-  font-size: 3rem;
-  padding: 2.25rem 0;
-}
-
-.landingText h2 {
-  font-size: 20.5px;
-}
-
-.landingText p {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 0.05rem;
-  overflow: hidden;
-  font-size: 20px;
 }
 
 .typed-text {
@@ -519,9 +493,34 @@ body {
   padding-bottom: 1.8rem;
 }
 
+.about a {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: #03A062;
+  color: #000000;
+  border: 1px solid transparent;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.about a:hover,
+.about a:focus {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.resume {
+  margin-top: 1.5rem;
+}
+
 .skillList {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   gap: 1rem;
 }
 
@@ -547,6 +546,8 @@ body {
 .skillList li .icons.skills {
   font-size: 2.5rem;
   padding-bottom: 1rem;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
 }
 
 .skills .titles {
@@ -574,6 +575,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 2rem;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 .project .projectInfo {
   text-align: center;
@@ -584,7 +587,7 @@ body {
   line-height: 2.5rem;
 }
 .project .projectInfo .projectDesc {
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding-bottom: 1.25rem;
   width: 90%;
   margin: 0 auto;
@@ -601,28 +604,31 @@ body {
 }
 .project .projectInfo .projectIcons .projectIcons .projects {
   font-size: 1.5rem;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
 }
 .project .projectInfo .projectLink {
   font-size: 1.2rem;
   padding-bottom: 3rem;
   font-weight: bold;
 }
-.project .projectInfo .projectLink .projectLink a {
-  padding: 0.5rem;
+.project .projectInfo .projectLink a {
+  padding: 1rem 2rem;
   border-radius: 2rem;
 }
 
 .projectLink a:focus,
 .projectLink a:hover {
-  -webkit-text-decoration: underline 5px #03A062;
-          text-decoration: underline 5px #03A062;
+  background-color: #03A062;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .projectIcons .projects:hover,
 .projectIcons .projects:focus {
   color: #03A062;
-  -webkit-transition: 0.75s;
-  transition: 0.75s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .projectDisplay {
@@ -644,17 +650,8 @@ body {
   transition: 1.25s;
 }
 
-.projectDisplay img:focus,
-.projectDisplay img:hover,
-.projectDisplay video:focus,
-.projectDisplay video:hover {
-  -webkit-transition: 1.25s;
-  transition: 1.25s;
-}
-
 .project {
   background: #222324;
-  position: relative;
   border-radius: 2rem;
   border: 3px solid #FFFFFF;
   -webkit-transition: 0.7s;
@@ -665,7 +662,6 @@ body {
   box-shadow: 0px 0px 14px 7px rgba(255, 255, 255, 0.71);
   -webkit-box-shadow: 0px 0px 14px 7px rgba(255, 255, 255, 0.71);
   -moz-box-shadow: 0px 0px 14px 7px rgba(255, 255, 255, 0.71);
-  scale: 1.05;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -677,7 +673,9 @@ footer .titles {
 footer p {
   text-align: center;
   font-size: 1.3rem;
-  padding-bottom: 1.2rem;
+  padding-bottom: 3rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
 form {
@@ -723,12 +721,14 @@ button {
   margin-top: 1.2rem;
   border-radius: 3rem;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.7rem 1.4rem;
   font-size: 1.25rem;
   font-weight: bold;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 2px solid transparent;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 button:hover,
@@ -750,6 +750,11 @@ button:focus {
       justify-content: space-around;
   padding: 3rem 0;
   font-size: 2rem;
+}
+
+.contactIcons i {
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .contactIcons i:hover,
@@ -776,6 +781,11 @@ button:focus {
 }
 
 @media screen and (min-width: 430px) {
+  .landingText h2,
+.landingText p {
+    font-size: 1.5rem;
+  }
+
   .about p {
     font-size: 1.25rem;
   }
@@ -789,7 +799,7 @@ button:focus {
   }
 
   .skillList {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33% 33% 32%;
   }
 
   .vsCode {
@@ -797,6 +807,32 @@ button:focus {
   }
 }
 @media screen and (min-width: 650px) {
+  nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .navLinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .navLinks li {
+    opacity: 1;
+    padding: 1.5rem 0;
+  }
+
+  .navBurger {
+    display: none;
+  }
+
   .project .projectInfo .projectName {
     font-size: 2rem;
     padding: 3rem 0;
@@ -811,13 +847,17 @@ button:focus {
     font-size: 1.35rem;
   }
 
+  button {
+    padding: 1rem 2rem;
+  }
+
   .scrollToTop {
     font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 985px) {
   .landingText {
-    height: 84vh;
+    height: 100vh;
   }
 
   .landingText h1 {
@@ -831,7 +871,7 @@ button:focus {
   }
 
   .skillList {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 19.5% 19.5% 19.5% 19.5% 19.5%;
   }
 
   .skillList li .icons.skills {
@@ -846,6 +886,10 @@ button:focus {
 .projectDisplay img,
 .projectDisplay video {
     max-width: 950px;
+  }
+
+  footer p {
+    padding-bottom: 2rem;
   }
 
   form input {
@@ -868,7 +912,7 @@ button:focus {
   }
 }
 html {
-  background-color: #0c0c0c;
+  background-color: #151414;
   font-family: "Montserrat", sans-serif;
   line-height: 1.75rem;
   letter-spacing: 1.25px;

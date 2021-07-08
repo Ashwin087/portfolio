@@ -1,25 +1,37 @@
+const hamburgerMenu = document.querySelector('.navBurger');
+const navUl = document.querySelector('.navLinks');
+const navLi = document.querySelector('.navLinks li')
+const navAnchor = document.querySelector('.navLinks a')
+
+
 const navSlide = () => {
-    const burger = document.querySelector('.navBurger')
-    const nav = document.querySelector('.navLinks')
-    const navLinks = document.querySelectorAll('.navLinks li')
+    hamburgerMenu.addEventListener('click', () => {
+        const navUl = document.querySelector('.navLinks');
+        const navLi = document.querySelectorAll('.navLinks li')
 
-    burger.addEventListener('click', () => {
-        // Toggle Nav
-        nav.classList.toggle('navActive');
+        // Toggle Nav;
+        navUl.classList.toggle('active');
+        hamburgerMenu.classList.toggle('burgerToggle');
 
-        // Animate Links
-        navLinks.forEach( (link, index) => {
-            if(link.style.animation) {
-                link.style.animation = ''
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.33}s`
-            }
-        });
-        // Burger Animation
-        burger.classList.toggle('burgerToggle');
+        // Animate Link
+        // navLi.forEach( (link, index) => {
+        //     if(link.style.animation) {
+        //         link.style.animation = ''
+        //     } else {
+        //     link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.1}s`
+        //     }
+        // })
     });
 }
+
 navSlide();
+
+navUl.addEventListener('click', () => {
+    navUl.classList.toggle('active');
+    hamburgerMenu.classList.toggle('burgerToggle');
+})
+
+
 
 // Scroll to Top of Page
 const takeToTop = () => {
