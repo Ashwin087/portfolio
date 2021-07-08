@@ -1,4 +1,9 @@
 @media screen and (min-width: 430px){
+    .landingText h2,
+    .landingText p{
+        font-size: 1.5rem;
+    }
+
     .about p {
     font-size: 1.25rem;
     }
@@ -12,7 +17,7 @@
     }
 
     .skillList {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 33% 33% 32%;
     }
 
     .vsCode {
@@ -21,6 +26,24 @@
 }
 
 @media screen and (min-width: 650px){
+    nav {
+        flex-direction: row;
+    }
+
+    .navLinks{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navLinks li {
+        opacity: 1;
+        padding: 1.5rem 0;
+    }
+
+    .navBurger{
+        display: none;
+    }
+
     .project {
         .projectInfo{
             .projectName {
@@ -42,6 +65,10 @@
         }
     }
 
+    button{
+        padding: 1rem 2rem;
+    }
+
     .scrollToTop {
         font-size: 1.5rem;
     }
@@ -50,7 +77,7 @@
 
 @media screen and (min-width: 985px){
     .landingText {
-        height: 84vh;
+        height: 100vh;
     }
 
     .landingText h1{
@@ -64,7 +91,7 @@
     }
     
     .skillList {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 19.5% 19.5% 19.5% 19.5% 19.5%;
     }
 
     .skillList li .icons.skills {
@@ -78,6 +105,11 @@
     .projectDisplay img, 
     .projectDisplay video {
         max-width: 950px;
+    }
+
+
+    footer p {
+        padding-bottom: 2rem;
     }
 
     form input {

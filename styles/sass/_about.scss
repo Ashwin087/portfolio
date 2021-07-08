@@ -16,11 +16,33 @@
     padding-bottom: 1.8rem;
 }
 
+.about a{
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: #03A062;
+    color: #000000;
+    border: 1px solid transparent;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.about a:hover,
+.about a:focus{
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.resume {
+    margin-top: 1.5rem;
+}
 
 // Skills
 .skillList {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     gap: 1rem;
 }
 
@@ -39,6 +61,7 @@
 .skillList li .icons.skills {
     font-size: 2.5rem;
     padding-bottom: 1rem;
+    transition: 1.2s;
 }
 
 .skills .titles {
