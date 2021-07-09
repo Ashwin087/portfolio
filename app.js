@@ -1,8 +1,7 @@
+// Hamburger Menu Related
 const hamburgerMenu = document.querySelector('.navBurger');
 const navUl = document.querySelector('.navLinks');
-const navLi = document.querySelector('.navLinks li')
-const navAnchor = document.querySelector('.navLinks a')
-
+const anchors = document.querySelectorAll('.anchor')
 
 const navSlide = () => {
     hamburgerMenu.addEventListener('click', () => {
@@ -12,25 +11,16 @@ const navSlide = () => {
         // Toggle Nav;
         navUl.classList.toggle('active');
         hamburgerMenu.classList.toggle('burgerToggle');
-
-        // Animate Link
-        // navLi.forEach( (link, index) => {
-        //     if(link.style.animation) {
-        //         link.style.animation = ''
-        //     } else {
-        //     link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.1}s`
-        //     }
-        // })
     });
 }
-
 navSlide();
 
-navUl.addEventListener('click', () => {
-    navUl.classList.toggle('active');
-    hamburgerMenu.classList.toggle('burgerToggle');
+anchors.forEach((anchor) => {
+    anchor.addEventListener('click', () => {
+        navUl.classList.toggle('active');
+        hamburgerMenu.classList.toggle('burgerToggle');    
+    })
 })
-
 
 
 // Scroll to Top of Page
@@ -45,8 +35,6 @@ const takeToTop = () => {
     })
 }
 takeToTop();
-
-
 
 
 
