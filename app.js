@@ -6,14 +6,14 @@ const anchors = document.querySelectorAll('.anchor')
 const navSlide = () => {
     hamburgerMenu.addEventListener('click', () => {
         const navUl = document.querySelector('.navLinks');
-        const navLi = document.querySelectorAll('.navLinks li')
 
         // Toggle Nav;
         navUl.classList.toggle('active');
         hamburgerMenu.classList.toggle('burgerToggle');
     });
 }
-navSlide();
+
+
 
 anchors.forEach((anchor) => {
     anchor.addEventListener('click', () => {
@@ -21,6 +21,7 @@ anchors.forEach((anchor) => {
         hamburgerMenu.classList.toggle('burgerToggle');    
     })
 })
+
 
 
 // Scroll to Top of Page
@@ -34,7 +35,6 @@ const takeToTop = () => {
         })
     })
 }
-takeToTop();
 
 
 
@@ -89,3 +89,12 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(type, typingDelay + 300) // Delay typing on page load opposed to calling type().
     }
 })
+
+
+
+const init = () => {
+    navSlide();
+    takeToTop();
+}
+
+init();
