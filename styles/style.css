@@ -521,7 +521,7 @@ nav {
 
 .skillList {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 48% 48%;
   gap: 1rem;
 }
 
@@ -561,7 +561,6 @@ nav {
 
 .skillList .skills:hover,
 .skillList .skills:focus {
-  scale: 1.2;
   color: #03A062;
   -webkit-transition: 1.2s;
   transition: 1.2s;
@@ -805,7 +804,7 @@ button:focus {
   }
 
   .skillList {
-    grid-template-columns: 33% 33% 32%;
+    grid-template-columns: 31% 31% 31%;
   }
 
   .vsCode {
